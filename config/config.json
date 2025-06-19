@@ -1,0 +1,9 @@
+{
+  "buy_threshold": 3,
+  "sell_threshold": 3,
+  "window_seconds": 1.0,
+  "simulation_duration_seconds": 30,
+  "cooldown_seconds": 1.0,
+  "min_trade_interval": 0.1,
+  "max_trade_interval": 0.3
+}
