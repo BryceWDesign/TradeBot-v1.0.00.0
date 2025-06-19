@@ -2,6 +2,7 @@ import time
 import random
 import json
 from core.flow_reactor import FlowReactor
+from utils.logger import log_action
 
 def load_config(path="config/config.json"):
     with open(path, "r") as f:
@@ -21,7 +22,7 @@ def simulate_trade_stream(flow, config):
 
         action = flow.get_signal()
         if action:
-            print(f"[{time.strftime('%X')}] ACTION TRIGGERED: {action}")
+            log_action(action)
             time.sleep(cooldown)
             flow.buy_events.clear()
             flow.sell_events.clear()
